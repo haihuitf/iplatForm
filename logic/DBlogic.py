@@ -8,6 +8,10 @@
 from django.db import models
 
 
+class UserInfoManage(models.Manager):
+    pass
+
+
 class ProjectInfoManager(models.Manager):
 
     def insert_project(self, project_name, responsible_name, test_user, dev_user, publish_app, simple_desc, other_desc):

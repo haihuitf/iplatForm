@@ -3,7 +3,8 @@ from django.shortcuts import render
 # Create your views here.
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from testHome.serializers import UserSerializer, GroupSerializer
+from testHome.serializers import UserSerializer, GroupSerializer, UserInfoSerializer
+from testHome.models import *
 
 
 
@@ -21,3 +22,9 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+
+
+class UserInfoViewSet(viewsets.ModelViewSet):
+    queryset = UserInfo.objects.all()
+    print(queryset)
+    serializer_class = UserInfoSerializer
