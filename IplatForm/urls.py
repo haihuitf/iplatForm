@@ -22,7 +22,13 @@ from testHome import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
-router.register(r'UserInfo', views.UserInfoViewSet)
+router.register(r'userInfo', views.UserInfoViewSet)
+router.register(r'projectInfo', views.ProjectInfoViewSet)
+router.register(r'configInfo', views.ConfigInfoViewSet)
+router.register(r'modelsInfo', views.ModelsInfoViewSet)
+router.register(r'caseInfo', views.CaseInfoViewSet)
+# router.register(r'Registered', views.RegisteredViewSet)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
