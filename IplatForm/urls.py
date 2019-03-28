@@ -27,11 +27,13 @@ router.register(r'projectInfo', views.ProjectInfoViewSet)
 router.register(r'configInfo', views.ConfigInfoViewSet)
 router.register(r'modelsInfo', views.ModelsInfoViewSet)
 router.register(r'caseInfo', views.CaseInfoViewSet)
+# router.register(r'runCase', views.getlispic)
 # router.register(r'Registered', views.RegisteredViewSet)
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('run/', views.RunCaseViewSet)
 ]
